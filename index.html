@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -15,19 +16,24 @@
 
 <body>
   <header>
-    <nav>
-      <a href="#">KENTWAYNE</a>
-      <ul>
-        <li>
-          <a href="#echo-volumes">ECHO VOLUMES</a>
-          <ul>
-            <li><a class="dropdown-item" href="#volume1">Volume 1: Approaching Shatter</a></li>
-            <li><a class="dropdown-item" href="#volume2">Volume 2: The Taste of Ashes</a></li>
-            <li><a class="dropdown-item" href="#volume3">Volume 3: The Dialectic of Agony</a></li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">KENTWAYNE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            ECHO VOLUMES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#volume1">Volume 1: Approaching Shatter</a>
+            <a class="dropdown-item" href="#volume2">Volume 2: The Taste of Ashes</a>
+            <a class="dropdown-item" href="#volume3">Volume 3: The Dialectic of Agony</a>
+          </div>
         </li>
-        <li><a href="#testimonials">TESTIMONIALS</a></li>
-        <li><a href="#about">ABOUT KENT</a></li>
+        <li class="nav-item"><a href="#testimonials">TESTIMONIALS</a></li>
+        <li class="nav-item"><a href="#about">ABOUT KENT</a></li>
       </ul>
       <a href="#">BUY ECHO</a>
     </nav>
