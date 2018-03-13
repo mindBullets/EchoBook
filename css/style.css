@@ -95,5 +95,5 @@ img {
 /* why won't this float left? */
 .content-left {
   width: 40.17094017%; /* 470/1170 = 0.4017094017 */
-  /* float: left; */
+  float: left;
 }
