@@ -1,3 +1,99 @@
-section {
-  height: 100%;
+/*
+white = #FFFFFF
+*/
+
+/* global styles */
+body {
+  font-family: "adobe-garamond-pro",serif;
+  font-size: 100%;
+  color: #4B4B4B;
+
+}
+
+h1 {
+  font-family: "eurostile-extended",sans-serif;
+  font-weight: 900;
+  font-size: 4em; /* 64 / 16 = 6 */
+}
+
+h2, h3, h4, h5 {
+  font-family: "eurostile",sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em; /* 44/16 = 2.75em */
+}
+
+p {
+  line-height: 1.5em; /* 24/16 = 1.5em */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* header */
+.hero {
+  text-align: center;
+  background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: cover;
+  min-height: 100vh;
+}
+.hero h1, .hero h2 {
+  text-shadow: 0 4px 4px rgba(0,0,0,0.5);
+}
+
+/* colors */
+.white {
+  color: #FFFFFF;
+}
+.black {
+  color: #4B4B4B;
+}
+.gold {
+  color: #D1B471;
+}
+.purple {
+  color: #9013FE;
+}
+.blue {
+  color: #1893E7;
+}
+
+/* content sections */
+
+.background {
+  border: solid 1em #D1B471;
+}
+
+.main {
+  width: 80%; 
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.content-section {
+  min-height: 100%;
+  padding: 4.25em 0;
+}
+
+.content-section h2 {
+  margin-bottom: 1em;
+}
+
+.content-right {
+  width: 40.17094017%; /* 470/1170 = 0.4017094017 */
+}
+
+/* why won't this float left? */
+.content-left {
+  width: 40.17094017%; /* 470/1170 = 0.4017094017 */
+  /* float: left; */
 }
