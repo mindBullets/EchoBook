@@ -3,11 +3,25 @@ white = #FFFFFF
 */
 
 /* global styles */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clear {
+  clear: both;
+}
+
 body {
   font-family: "adobe-garamond-pro",serif;
   font-size: 100%;
   color: #4B4B4B;
 
+}
+
+.background {
+  border: solid 1em #D1B471;
 }
 
 h1 {
@@ -19,10 +33,15 @@ h1 {
 h2, h3, h4, h5 {
   font-family: "eurostile",sans-serif;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 h2 {
   font-size: 2em; /* 44/16 = 2.75em */
+}
+
+h4 {
+  font-size: 1.125em /* 18/16 = 1.125em */
 }
 
 p {
@@ -30,9 +49,11 @@ p {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
+
+
 
 /* header */
 .hero {
@@ -69,10 +90,6 @@ img {
 
 /* content sections */
 
-.background {
-  border: solid 1em #D1B471;
-}
-
 .main {
   width: 80%; 
   margin: 0 auto;
@@ -85,15 +102,22 @@ img {
 }
 
 .content-section h2 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.content-section h4 {
   margin-bottom: 1em;
 }
 
 .content-right {
   width: 40.17094017%; /* 470/1170 = 0.4017094017 */
+  /* display: inline-block; */
+  float: right;
 }
 
 /* why won't this float left? */
 .content-left {
-  width: 40.17094017%; /* 470/1170 = 0.4017094017 */
+  width: 40.17094017%;  /* 470/1170 = 0.4017094017 */
   float: left;
 }
