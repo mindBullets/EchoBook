@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115665910-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115665910-1');
+  </script>
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,35 +31,37 @@
 </head>
 
 <body>
-<div><!-- header and nav -->
+<!-- <div>header and nav -->
+  <!-- <nav class="global-nav">
+    <a href="#">KENTWAYNE</a>
+    <ul>
+      <li>
+        <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ECHO VOLUMES
+        </a>
+        <div aria-labelledby="navbarDropdownMenuLink">
+          <a href="#volume1">Volume 1: Approaching Shatter</a>
+          <a href="#volume2">Volume 2: The Taste of Ashes</a>
+          <a href="#volume3">Volume 3: The Dialectic of Agony</a>
+        </div>
+      </li>
+      <li><a href="#testimonials">TESTIMONIALS</a></li>
+      <li><a href="#about">ABOUT KENT</a></li>
+    </ul>
+    <a href="#">BUY ECHO</a>
+  </nav> -->
   <header>
-    <nav class="global-nav">
-      <a href="#">KENTWAYNE</a>
-      
-      <ul>
-        <li>
-          <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ECHO VOLUMES
-          </a>
-          <div aria-labelledby="navbarDropdownMenuLink">
-            <a href="#volume1">Volume 1: Approaching Shatter</a>
-            <a href="#volume2">Volume 2: The Taste of Ashes</a>
-            <a href="#volume3">Volume 3: The Dialectic of Agony</a>
-          </div>
-        </li>
-        <li><a href="#testimonials">TESTIMONIALS</a></li>
-        <li><a href="#about">ABOUT KENT</a></li>
-      </ul>
-      <a href="#">BUY ECHO</a>
-    </nav>
-
-    <div class="hero white">
-      <h1>ECHO</h1>
-      <h2>Robots and Magic in a Sci-Fi Dystopia</h2>
-      <a href="#" role="button">READ FREE CHAPTERS</a>
+    <div class="hero parallax-bg">
+      <div class="hero-text white">
+        <h1>ECHO</h1>
+        <h2>Robots and Magic in a Sci-Fi Dystopia</h2>
+        <a href="#" role="button">READ FREE CHAPTERS</a>
+      </div>
     </div>
   </header>
-</div><!-- end header and nav -->
+    
+
+<!-- </div>end header and nav -->
 
 <div class="background">
   <div class="main"> <!-- main content -->
@@ -161,6 +173,7 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/echo.js"></script>
 </body>
 
 </html>

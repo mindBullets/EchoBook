@@ -3,6 +3,17 @@ white = #FFFFFF
 */
 
 /* global styles */
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -17,9 +28,14 @@ body {
   font-family: "adobe-garamond-pro",serif;
   font-size: 100%;
   color: #4B4B4B;
+  height: 100%;
 
 }
 
+header {
+  height: 100%;
+  width: 100%;
+}
 .background {
   border: solid 1em #D1B471;
 }
@@ -53,22 +69,32 @@ img {
   height: auto;
 }
 
+/* parallax */
 
 
 /* header */
 .hero {
-  text-align: center;
   background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;
+  min-height: 100%;
+
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
-  background-size: cover;
-  min-height: 100vh;
 }
-.hero h1, .hero h2 {
+.hero-text {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+
 }
 
 /* colors */
