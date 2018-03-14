@@ -70,7 +70,9 @@ img {
 }
 
 /* parallax */
-
+.parallax-bg {
+  transition: initial;
+}
 
 /* header */
 .hero {
