@@ -43,7 +43,15 @@ header {
 h1 {
   font-family: "eurostile-extended",sans-serif;
   font-weight: 900;
-  font-size: 4em; /* 64 / 16 = 6 */
+  font-size: 4em; /* 64 / 16 = 4 */
+}
+
+.display {
+  font-family: "eurostile-extended",sans-serif;
+  font-weight: 900;
+  font-size: 6em; /* 96 / 16 = 6 */
+  letter-spacing: 0.03645833333em; /* 3.5 / 96 */
+  margin-bottom: 0.4166666667em; /* 40 / 96 */
 }
 
 h2, h3, h4, h5 {
@@ -53,7 +61,8 @@ h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: 2em; /* 44/16 = 2.75em */
+  font-size: 2em; /* 32/16 = 2em */
+  line-height: 1.25em
 }
 
 h4 {
@@ -92,11 +101,10 @@ img {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);
   position: absolute;
   left: 0;
-  top: 40%;
+  top: 32.7521793275218%; /* 263/803 */
   width: 100%;
   text-align: center;
   color: #000;
-
 }
 
 /* colors */
@@ -117,7 +125,6 @@ img {
 }
 
 /* content sections */
-
 .main {
   width: 80%; 
   margin: 0 auto;
@@ -144,8 +151,14 @@ img {
   float: right;
 }
 
-/* why won't this float left? */
 .content-left {
   width: 40.17094017%;  /* 470/1170 = 0.4017094017 */
   float: left;
+}
+
+/* button styles */
+.btn {
+  text-align: center;
+  display: block;
+  
 }
