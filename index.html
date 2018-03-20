@@ -22,47 +22,51 @@
 
   <!--  CSS -->
   <link rel="stylesheet" href="css/reset.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 
   <title>Echo</title>
 </head>
 
 <body>
-<!-- header and nav -->
 
-  <nav class="global-nav nav-down">
-    <h2><a href="#" class="brand">KENT<span class="black-brand">WAYNE</span></a></h2>
-    <ul>
-      <li>
-        <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ECHO VOLUMES
-        </a>
-        <div aria-labelledby="navbarDropdownMenuLink">
-          <a href="#volume1">Volume 1: Approaching Shatter</a>
-          <a href="#volume2">Volume 2: The Taste of Ashes</a>
-          <a href="#volume3">Volume 3: The Dialectic of Agony</a>
+  <!-- Brand, Navigation, and Main CTA -->
+    <header class="global-header nav-down">
+      <div class="container" id="nav-container">
+        <h1 class="brand">KENT<span class="black-brand">WAYNE</span></h1>
+        
+        <nav class="site-nav off-white">
+          <ul>
+            <li><a href="#volume1" id="dropdown">VOLUMES</a>
+              <ul class="sub-nav off-white">
+                <li><a href="#volume1">Volume 1: Approaching Shatter</a></li>
+                <li><a href="#volume2">Volume 2: The Taste of Ashes</a></li>
+                <li><a href="#volume3">Volume 3: The Dialectic of Agony</a></li>
+              </ul>
+            </li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#" >BUY</a></li>
+          </ul>
+        </nav>
+
+
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
         </div>
-      </li>
-      <li><a href="#testimonials">TESTIMONIALS</a></li>
-      <li><a href="#about">ABOUT KENT</a></li>
-    </ul>
-    <a href="#">BUY ECHO</a>
-  </nav>
-
-  
-    <div class="hero parallax-bg">
-      <div class="hero-text white">
-        <h1 class="display">ECHO</h1>
-        <h2>Robots and Magic in<br>a Sci-Fi Dystopia</h2>
-        <a href="#" role="button">READ FREE CHAPTERS</a>
       </div>
-    </div>
-    
+    </header>
+  <!-- End Brand, Navigation, and Main CTA -->
 
-<!-- end header and nav -->
+  <div class="hero parallax-bg"><!-- Hero -->
+    <div class="hero-text white">
+      <h1 class="display">ECHO</h1>
+      <h2 class="display-subtext">Robots and Magic in<br>a Sci-Fi Dystopia</h2>
+      <a href="#" role="button">READ FREE CHAPTERS</a>
+    </div>
+  </div><!-- End Hero -->
+
+
 
 <div class="background">
   <div class="main"> <!-- main content -->
@@ -152,7 +156,7 @@
             <p>Thanks for checking out my works!  To all you writers, I wish you inspired drafting and insightful editing!</p>
             <p>Kent Wayne</p>
           </div>
-          
+          <!-- add space equal to the side margins -->
         </div>
       </section>
     </div>
@@ -162,19 +166,24 @@
 <!-- floating social nav -->
 <div class="social">
   <ul>
-      <li><i class="fab fa-amazon"></i></li>
       <li><i class="fab fa-facebook-f"></i></li>
-      <li><i class="fab fa-wordpress-simple"></i></li>
       <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-wordpress-simple"></i></li>
+      <li><i class="fab fa-amazon"></i></li>
+      
+      
   </ul>
 </div><!-- end floating social nav -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/echo.js"></script>
 </body>
+
+  <footer>
+    <!-- link to me copyright k.w. -->
+  </footer>
 
 </html>
