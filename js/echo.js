@@ -1,14 +1,51 @@
 /* navigation show/hide variables */
 var didScroll;
 var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('nav').outerHeight();
+var delta = 5; //pixels
+var navbarHeight = $('header').outerHeight();
 /* end navigation show/hide variables */
+
+/* border variables */
+var heroImageHeight = $('.hero').height();
+/* end border variables */
+
+/* section variables used to detect scrolling to a new section */
+//get all the ids
+var arr = $('#section-wrapper > section').map(function(){ 
+  return this.id;
+}).get();
+
+//this will hold the positions of all the sections
+//use it to change the border color for each section
+var anchorOffset = [];
+
+//get the positions of all the sections
+for (let i = 0; i < arr.length; i++) {
+  let curSection = $( '#' + arr[i] );
+  if (curSection.length) {
+    let offset = curSection.offset().top;
+    anchorOffset.push(offset);
+  }
+  console.log(anchorOffset[i]); 
+  
+}
+
 
 
 $(window).scroll(function() {
+  var myScrollTop = $(this).scrollTop();
   parallax();
-})
+
+  //fixed top border
+  if( $(this).scrollTop() > heroImageHeight) {
+    $('.background-border-top').addClass('background-border-top--fixed');
+  } else {
+    $('.background-border-top').removeClass('background-border-top--fixed'); 
+  }
+
+  if ( $(this).scrollTop() > anchorOffset ) {
+  }
+});
 
 function parallax() {
   var wScroll = $(window).scrollTop();
@@ -47,7 +84,11 @@ function hasScrolled() {
     }
   }
 
-  lastScrollTop = st;  
+  lastScrollTop = st;
+
+  /* add background color changer here */
+  /* end background color changer here */
+
 }
 /* end navigation show/hide */
 
@@ -56,5 +97,6 @@ function hasScrolled() {
 $('.menu-toggle').click(function () { 
   $('.site-nav').toggleClass('site-nav--open', 200);
   $(this).toggleClass('open');
-  
 });
+
+
