@@ -77,6 +77,12 @@ function hasScrolled() {
   if (st > lastScrollTop && st > navbarHeight) {
     // Scroll Down
     $('header').removeClass('nav-down').addClass('nav-up');
+    
+    //if mobile menu is open close it and switch the icon
+    if ( $('.site-nav').hasClass('site-nav--open') ) {
+      $('.site-nav').toggleClass('site-nav--open', 200);
+      $( '.menu-toggle' ).toggleClass('open');
+    }
   } else {
     // Scroll Up
     if (st + $(window).height() < $(document).height()) {
