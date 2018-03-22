@@ -37,7 +37,7 @@ body {
   border-left: solid 1em #D1B471;
   border-right: solid 1em #D1B471;
   border-bottom: solid 1em #D1B471;
-  
+  padding-bottom: 6.1875em; /*99/16*/
 }
 
 .background-border-top {
