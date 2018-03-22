@@ -145,6 +145,22 @@ header::after {
 }
 /* END navigation */
 
+/* social menu */
+.social {
+  position: fixed;
+  right: 2.3333333333em;
+  top: 40%;
+  font-size: 1.25em;    
+}
+
+.social li {
+  padding-bottom: 1.111111111111111em;
+  display: block;
+}
+
+
+/* end social menu */
+
 /* menu toggle for nav dropdowns */
 .menu-toggle {
   padding: .905em 1em;
@@ -314,6 +330,7 @@ img {
   font-size: 6em; /* 96 / 16 = 6 */
   letter-spacing: 0.03645833333em; /* 3.5 / 96 */
   margin-bottom: 0.4166666667em; /* 40 / 96 */
+  padding-left: .25em;
 }
 
 /* colors */
