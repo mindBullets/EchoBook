@@ -5,6 +5,10 @@ var delta = 5; //pixels
 var navbarHeight = $('header').outerHeight();
 /* end navigation show/hide variables */
 
+/* header variables */
+var heroTextFade = $( '.display, .display-subtext' );
+/* end header variables */
+
 /* border variables */
 var heroImageHeight = $('.hero').height();
 /* end border variables */
@@ -92,6 +96,11 @@ function hasScrolled() {
 
   lastScrollTop = st;
 
+  /* fade hero text */
+  heroTextFade.css({
+    'opacity': 1 - st/500
+  });
+  /* end fade hero text */
   /* add background color changer here */
   /* end background color changer here */
 

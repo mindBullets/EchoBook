@@ -88,6 +88,9 @@ h1 {
   color: #FFFFFF;
   float: left;
 }
+.brand a {
+  font-weight: 400;
+}
 
 .site-nav {
   /* float: right; */
@@ -227,11 +230,12 @@ header::after {
     padding: 1.5em;
   }
 
-  .site-nav a:hover,
-  .site-nav a:focus {
-
+  .site-nav a:hover {
+    background-color: transparent;
+    text-shadow: 0 4px 4px rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    
   }
-
 
   #dropdown {
     border-bottom: none;
@@ -309,7 +313,8 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
-  z-index: -1;
+  /* min-height: 37.5em; */
+  z-index: 0;
 
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -331,6 +336,22 @@ img {
   letter-spacing: 0.03645833333em; /* 3.5 / 96 */
   margin-bottom: 0.4166666667em; /* 40 / 96 */
   padding-left: .25em;
+}
+
+.display-subtext {
+  margin-bottom: 3em;
+}
+
+.volume1 {
+  background-image: url("../images/homepage/reading-images/DesktopVolume1ReadingHero@2x.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  /* min-height: 37.5em; */
+  z-index: 0;
 }
 
 /* colors */
@@ -366,6 +387,10 @@ img {
   background-color: #1893E7;
 }
 
+.white-border {
+  border: 2px solid #FFFFFF;  
+}
+
 /* content sections */
 .main {
   width: 80%;
@@ -398,9 +423,21 @@ img {
   float: left;
 }
 
+.content-left p,
+.content-right p {
+  margin-bottom: 2.5em;
+}
+
 /* button styles */
 .btn {
+  display: inline-block;
   text-align: center;
-  display: block;
+  padding: 1.5em 6em;
+  text-shadow: initial;
+	border-radius: 48px;
   
 }
+.btn:hover {
+  text-shadow: 0 4px 4px rgba(0,0,0,0.5);  
+}
+
