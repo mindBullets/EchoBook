@@ -364,6 +364,12 @@ img {
 .black {
   color: #4B4B4B;
 }
+.black:visited {
+  color: #4B4B4B;  
+}
+.dark-grey {
+  color: #4B4B4B;
+}
 .gold {
   color: #D1B471;
 }
@@ -398,6 +404,9 @@ img {
   margin: 0 auto;
   background-color: #FFFFFF;
 }
+
+
+
 
 .content-section {
   min-height: 100%;
@@ -434,9 +443,9 @@ img {
   text-align: center;
   padding: 1.5em 6em;
   text-shadow: initial;
-	border-radius: 48px;
-  
+  border-radius: 48px;
 }
+
 .btn:hover {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);  
 }

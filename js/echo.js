@@ -98,7 +98,7 @@ function hasScrolled() {
 
   /* fade hero text */
   heroTextFade.css({
-    'opacity': 1 - st/500
+    'opacity': 1 - st*.0025
   });
   /* end fade hero text */
   /* add background color changer here */
