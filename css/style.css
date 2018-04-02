@@ -109,7 +109,7 @@ h1 {
 
 .site-nav a:hover,
 .site-nav a:focus {
-  background-color: #D1B471;
+  /* background-color: #D1B471; */
   color: #4B4B4B;
 }
 
@@ -238,8 +238,15 @@ header::after {
   .site-nav a:hover {
     background-color: transparent;
     text-shadow: 0 4px 4px rgba(0,0,0,0.5);
+    color: inherit; 
+  }
+
+  .site-nav a:focus {
+    color: inherit;
+  }
+
+  .site-nav a:visit {
     color: #FFFFFF;
-    
   }
 
   #dropdown {
