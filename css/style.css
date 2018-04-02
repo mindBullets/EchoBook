@@ -504,9 +504,12 @@ img {
   padding: 1.5em 6em;
   text-shadow: initial;
   border-radius: 48px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.15s ease-in-out;
 }
 
 .btn:hover {
-  text-shadow: 0 4px 4px rgba(0,0,0,0.5);  
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: box-shadow 0.15s ease-in-out;
 }
 
