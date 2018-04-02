@@ -337,6 +337,10 @@ img {
 .hero-image--volume1 {
   background-image: url("../images/reading-images/heroImageVolume1@2x.jpg");    
 }
+.hero-image--volume2 {
+  background-image: url("../images/reading-images/heroImageVolume2@2x.jpg");    
+}
+
 .hero-text {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);
   position: absolute;
