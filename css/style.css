@@ -153,12 +153,17 @@ header::after {
   position: fixed;
   right: 2.3333333333em;
   top: 40%;
-  font-size: 1.25em;    
+  font-size: 1.25em;  
+  color: #D1B471;  
 }
 
 .social li {
   padding-bottom: 1.111111111111111em;
   display: block;
+}
+
+.social a:visited {
+  color: inherit;
 }
 
 

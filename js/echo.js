@@ -24,19 +24,41 @@ var arr = $('#section-wrapper > section').map(function(){
 var anchorOffset = [];
 
 //get the positions of all the sections
-for (let i = 0; i < arr.length; i++) {
-  let curSection = $( '#' + arr[i] );
-  if (curSection.length) {
-    let offset = curSection.offset().top;
-    anchorOffset.push(offset);
+function getSectionScrollPosition() {
+  for (let i = 0; i < arr.length; i++) {
+    let curSection = $( '#' + arr[i] );
+    if (curSection.length) {
+      let offset = curSection.offset().top;
+      anchorOffset.push(offset);
+    }
+    console.log(anchorOffset[i]); 
   }
-  console.log(anchorOffset[i]); 
+}
+
+//change border page border color
+function changePageBorder(hex) {
+  $('.background-border-top').css('background-color', hex); //set to gold  
+  $('.background').css('border-left', 'solid 1em' + hex );
+  $('.background').css('border-bottom', 'solid 1em' + hex );
+  $('.background').css('border-right', 'solid 1em' + hex );
+  $('.social').css( 'color', hex );
+  // $('.social a:visited').css( 'color', hex );
   
 }
 
+getSectionScrollPosition();
 
+const GOLD = 0;
+const PURPLE = 1;
+const BLUE = 2;
+const BLACK = 3;
+/* end section variables used to detect scrolling to a new section */
 
-$(window).scroll(function() {
+$( window ).resize( function () {
+  getSectionScrollPosition();
+});
+
+$( window ).scroll( function() {
   var myScrollTop = $(this).scrollTop();
   parallax();
 
@@ -47,7 +69,14 @@ $(window).scroll(function() {
     $('.background-border-top').removeClass('background-border-top--fixed'); 
   }
 
-  if ( $(this).scrollTop() > anchorOffset ) {
+  if ( ($(this).scrollTop() >= anchorOffset[GOLD])  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
+    changePageBorder('#D1B471'); //gold
+  } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
+    changePageBorder("#9013FE"); //purple
+  } else if ( ( $(this).scrollTop() >= anchorOffset[BLUE] ) && ( $(this).scrollTop() < anchorOffset[BLACK] ) ) {
+    changePageBorder("#1893E7"); //blue
+  } else if ( $(this).scrollTop() >= anchorOffset[BLACK] ) {
+    changePageBorder("#4B4B4B"); //black
   }
 });
 
