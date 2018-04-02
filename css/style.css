@@ -209,7 +209,7 @@ header::after {
   opacity: 0;    
 }
 
-/* media query for site nav*/
+/* media query for site nav tablet and below*/
 @media (min-width: 769px) {
   .menu-toggle {
     display: none;
@@ -311,7 +311,6 @@ img {
 
 /* header */
 .hero {
-  background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -324,6 +323,12 @@ img {
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
+}
+.hero-image--home {
+  background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");  
+}
+.hero-image--volume1 {
+  background-image: url("../images/reading-images/heroImageVolume1@2x.jpg");    
 }
 .hero-text {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);
@@ -345,18 +350,6 @@ img {
 
 .display-subtext {
   margin-bottom: 3em;
-}
-
-.volume1 {
-  background-image: url("../images/homepage/reading-images/DesktopVolume1ReadingHero@2x.jpg");
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100%;
-  /* min-height: 37.5em; */
-  z-index: 0;
 }
 
 /* colors */
@@ -410,9 +403,6 @@ img {
   background-color: #FFFFFF;
 }
 
-
-
-
 .content-section {
   min-height: 100%;
   padding: 4.25em 0;
@@ -441,6 +431,63 @@ img {
 .content-right p {
   margin-bottom: 2.5em;
 }
+
+/* page */
+.page-wrapper {
+  width: 46.6875em; /* 747/16 */
+  margin: auto;
+  /* margin-top: 2.25em; 36/16 */
+  position: relative;
+  top: -30.54420922%; /* 630/803 */  
+  font-size: 1.3125em; /* 21/16 */
+  z-index: 0;
+
+}
+
+.page {
+  position: relative;
+  top: 0;
+  padding-top: 5.1428571429em;
+  background-color: #FFFFFF;    
+  /* background-color: #ffffff; */
+  -webkit-clip-path: polygon(169px 0, 100% 0, 100% 100%, 0% 100%, 0 169px);
+  clip-path: polygon(169px 0, 100% 0, 100% 100%, 0% 100%, 0 169px);  
+}
+
+.page--corner-1 {
+  height: 169px;
+  width: 169px;
+  position: absolute;
+  top: 0em;
+  background-color: rgba(255,255,255,0.2);
+  z-index: 2;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
+  clip-path: polygon(100% 0, 0% 100%, 0 0);
+  /* background-color: red; */
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 1.0952380952em; 
+}
+
+.number h2 {
+  font-size: 3.4285714286em;
+  line-height: .75em;
+}
+
+.page p, h3 {
+  margin: 0 6.1875em; /* 99/16 */
+  margin-bottom: 1em;
+}
+
+.chapter p:last-child {
+  margin-bottom: 9em;
+}
+/* end page */
+
+
 
 /* button styles */
 .btn {

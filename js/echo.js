@@ -6,7 +6,7 @@ var navbarHeight = $('header').outerHeight();
 /* end navigation show/hide variables */
 
 /* header variables */
-var heroTextFade = $( '.display, .display-subtext' );
+var heroTextFade = $( '.display, .display-subtext, .hero-text' );
 /* end header variables */
 
 /* border variables */
@@ -41,9 +41,7 @@ function changePageBorder(hex) {
   $('.background').css('border-left', 'solid 1em' + hex );
   $('.background').css('border-bottom', 'solid 1em' + hex );
   $('.background').css('border-right', 'solid 1em' + hex );
-  $('.social').css( 'color', hex );
-  // $('.social a:visited').css( 'color', hex );
-  
+  $('.social').css( 'color', hex );  
 }
 
 getSectionScrollPosition();
@@ -56,6 +54,7 @@ const BLACK = 3;
 
 $( window ).resize( function () {
   getSectionScrollPosition();
+  heroImageHeight = $('.hero').height();
 });
 
 $( window ).scroll( function() {
@@ -65,11 +64,15 @@ $( window ).scroll( function() {
   //fixed top border
   if( $(this).scrollTop() > heroImageHeight) {
     $('.background-border-top').addClass('background-border-top--fixed');
+    $('.background-border-top').css('z-index', '2');    
   } else {
     $('.background-border-top').removeClass('background-border-top--fixed'); 
+    $('.background-border-top').css('z-index', '0');    
   }
 
-  if ( ($(this).scrollTop() >= anchorOffset[GOLD])  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
+  if ( $(this).scrollTop() < (anchorOffset[GOLD]/2)) {
+    $('.social').css( 'color', '#FFFFFF' );  
+  } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD]/2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
     changePageBorder('#D1B471'); //gold
   } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
     changePageBorder("#9013FE"); //purple
