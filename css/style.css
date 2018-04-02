@@ -161,6 +161,7 @@ header::after {
   display: block;
 }
 
+.social a:link,
 .social a:visited {
   color: inherit;
 }
