@@ -154,7 +154,6 @@ header::after {
   right: 2.3333333333em;
   top: 40%;
   font-size: 1.25em;  
-  color: #FFFFFF;  
 }
 
 .social li {
@@ -443,6 +442,14 @@ img {
   z-index: 0;
 
 }
+
+/* .background--v1Border {
+  border-left: solid 1em #D1B471;
+  border-right: solid 1em #D1B471;
+  border-bottom: solid 1em #D1B471;
+  padding-bottom: 6.1875em; 
+  
+} */
 
 .page {
   position: relative;

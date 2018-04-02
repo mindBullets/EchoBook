@@ -41,7 +41,7 @@ function changePageBorder(hex) {
   $('.background').css('border-left', 'solid 1em' + hex );
   $('.background').css('border-bottom', 'solid 1em' + hex );
   $('.background').css('border-right', 'solid 1em' + hex );
-  $('.social').css( 'color', hex );  
+  $('.social li a').css( 'color', hex );  
 }
 
 getSectionScrollPosition();
@@ -71,7 +71,7 @@ $( window ).scroll( function() {
   }
 
   if ( $(this).scrollTop() < (anchorOffset[GOLD]/2)) {
-    $('.social').css( 'color', '#FFFFFF' );  
+    $('.social a').css( 'color', '#FFFFFF' );  
   } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD]/2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
     changePageBorder('#D1B471'); //gold
   } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
