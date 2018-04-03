@@ -38,7 +38,6 @@ body {
   border-right: solid 1em #D1B471;
   border-bottom: solid 1em #D1B471;
   padding-bottom: 6.1875em; /*99/16*/
-  margin-bottom: 4.25em;
 }
 
 .background-border-top {
@@ -564,6 +563,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   }
   /* end social */
 
+  .background {
+    padding-bottom: 0;
+    /* margin-bottom: 4.25em; */
+  }
+  
   /* content sections */
   .main {
     width: 100%;
@@ -572,10 +576,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     background-color: #FFFFFF;
   }
 
-  .content-section {
-    min-height: 100%;
-    padding: 4.25em 0;
-  }
+  
 
   .content-section h2 {
     margin-top: 1em;
@@ -673,18 +674,16 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
 
   /* header */
 
-  
+  .background {
+    margin-bottom: 4.25em;
+  }
+
   /* content sections */
   .main {
     width: 100%;
     max-width: 479px;
     margin: 0 auto;
     background-color: #FFFFFF;
-  }
-
-  .content-section {
-    min-height: 100%;
-    padding: 4.25em 0;
   }
 
   .content-section h2 {
@@ -711,9 +710,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     margin-bottom: 2.5em;
   }
 
-  #about p:first-of-type {
-    margin-top: 1em;
-  }
+  
   /* end content sections */
  
   /* individual volume pages */
