@@ -38,6 +38,7 @@ body {
   border-right: solid 1em #D1B471;
   border-bottom: solid 1em #D1B471;
   padding-bottom: 6.1875em; /*99/16*/
+  margin-bottom: 4.25em;
 }
 
 .background-border-top {
@@ -587,6 +588,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     margin-bottom: 1em;
   }
 
+  .content-section .btn {
+    font-size: .55em;
+  }
   .content-right,
   .content-left {
     width: 60%; 
@@ -751,21 +755,26 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     bottom: 0;
     width: 100%;
     font-size: 1.25em;
-    display: flex;
-    justify-content: space-between;
   }
 
   .social ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
   }
   .social li {
-    display: block;
+    flex: 1 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 1em 0;
+    /* border: 1px solid black; */
   }
 
   .social a:link,
   .social a:visited {
+    
     color: inherit;
+    padding: 1em 1.5em;
   }
 
 

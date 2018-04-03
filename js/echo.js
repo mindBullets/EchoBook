@@ -31,7 +31,6 @@ function getSectionScrollPosition() {
       let offset = curSection.offset().top;
       anchorOffset.push(offset);
     }
-    console.log(anchorOffset[i]); 
   }
 }
 
