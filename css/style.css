@@ -448,7 +448,9 @@ img {
 
   /* header */
   .hero {
+    position: relative;
     background-position: left;
+    background-size: Size(auto);
   }
   
 
@@ -621,6 +623,27 @@ img {
     margin-bottom: 1em;
   }
   /* end individual volume pages */
+
+}
+
+@media
+only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 1024px),
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 1024px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 1024px),
+only screen and (        min-device-pixel-ratio: 2)      and (max-width: 1024px),
+only screen and (                min-resolution: 192dpi) and (max-width: 1024px),
+only screen and (                min-resolution: 2dppx)  and (max-width: 1024px) { 
+
+  /* Medium screen, retina, stuff to override above media query */
+  .hero-image--home {
+    background-image: url("../images/homepage/TabletJumbotron@2x.jpg");  
+  }
+  .hero-image--volume1 {
+    background-image: url("../images/reading-images/tabletHeroImageVolume1@2x.jpg");    
+  }
+  .hero-image--volume2 {
+    background-image: url("../images/reading-images/tabletHeroImageVolume2@2x.jpg");    
+  }
 
 }
 
