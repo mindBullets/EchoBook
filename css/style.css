@@ -243,17 +243,6 @@ img {
 .hero-image--volume2 {
   background-image: url("../images/reading-images/heroImageVolume2.jpg");    
 }
-@media screen and (min-resolution: 2dppx) {
-  .hero-image--home {
-    background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");  
-  }
-  .hero-image--volume1 {
-    background-image: url("../images/reading-images/heroImageVolume1@2x.jpg");    
-  }
-  .hero-image--volume2 {
-    background-image: url("../images/reading-images/heroImageVolume2@2x.jpg");    
-  }
-}
 
 .hero-text {
   text-shadow: 0 4px 4px rgba(0,0,0,0.5);
@@ -461,27 +450,6 @@ img {
   .hero {
     background-position: left;
   }
-
-  .hero-image--home {
-    background-image: url("../images/homepage/TabletJumbotron.jpg");  
-  }
-  .hero-image--volume1 {
-    background-image: url("../images/reading-images/tabletHeroImageVolume1.jpg");    
-  }
-  .hero-image--volume2 {
-    background-image: url("../images/reading-images/tabletHeroImageVolume2.jpg");    
-  }
-  @media screen and (min-resolution: 2dppx) {
-    .hero-image--home {
-      background-image: url("../images/homepage/TabletJumbotron@2x.jpg");  
-    }
-    .hero-image--volume1 {
-      background-image: url("../images/reading-images/tabletHeroImageVolume1@2x.jpg");    
-    }
-    .hero-image--volume2 {
-      background-image: url("../images/reading-images/tabletHeroImageVolume2@2x.jpg");    
-    }
-  }
   
 
   /* navigation styles */
@@ -673,26 +641,7 @@ img {
 
   /* header */
 
-  .hero-image--home {
-    background-image: url("../images/homepage/MobileJumbotron.jpg");  
-  }
-  .hero-image--volume1 {
-    background-image: url("../images/reading-images/tabletHeroImageVolume1.jpg");    
-  }
-  .hero-image--volume2 {
-    background-image: url("../images/reading-images/tabletHeroImageVolume2.jpg");    
-  }
-  @media screen and (min-resolution: 2dppx) {
-    .hero-image--home {
-      background-image: url("../images/homepage/MobileJumbotron@2x.jpg");  
-    }
-    .hero-image--volume1 {
-      background-image: url("../images/reading-images/tabletHeroImageVolume1@2x.jpg");    
-    }
-    .hero-image--volume2 {
-      background-image: url("../images/reading-images/tabletHeroImageVolume2@2x.jpg");    
-    }
-  }
+  
   /* content sections */
   .main {
     width: 100%;
@@ -799,4 +748,25 @@ img {
 
 
 /* end social menu */
+}
+
+/* retina and hi density displays */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 479px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 479px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 479px),
+only screen and (        min-device-pixel-ratio: 2)      and (max-width: 479px),
+only screen and (                min-resolution: 192dpi) and (max-width: 479px),
+only screen and (                min-resolution: 2dppx)  and (max-width: 479px) { 
+
+  /* Small screen, retina, stuff to override above media query */
+  .hero-image--home {
+    background-image: url("../images/homepage/MobileJumbotron@2x.jpg");  
+  }
+  .hero-image--volume1 {
+    background-image: url("../images/reading-images/mobileHeroImageVolume1@2x.jpg");    
+  }
+  .hero-image--volume2 {
+    background-image: url("../images/reading-images/mobileHeroImageVolume2@2x.jpg");    
+  }
 }
