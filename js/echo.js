@@ -70,9 +70,9 @@ $( window ).scroll( function() {
     $('.background-border-top').css('z-index', '0');    
   }
 
-  if ( $(this).scrollTop() < (anchorOffset[GOLD]/2)) {
+  if ( $(this).scrollTop() < (anchorOffset[GOLD] / 2)) {
     $('.social a').css( 'color', '#FFFFFF' );  
-  } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD]/2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
+  } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD] / 2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
     changePageBorder('#D1B471'); //gold
   } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
     changePageBorder("#9013FE"); //purple

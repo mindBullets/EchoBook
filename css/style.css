@@ -346,7 +346,7 @@ img {
   margin-bottom: 2.5em;
 }
 
-/* page */
+/* individual volume pages */
 .page-wrapper {
   width: 67.36111111%; /* 970/1440 */
   margin: auto;
@@ -358,16 +358,6 @@ img {
 
 }
 
-/* .background--v1Border {
-  border-left: solid 1em #D1B471;
-  border-right: solid 1em #D1B471;
-  border-bottom: solid 1em #D1B471;
-  padding-bottom: 6.1875em; 
-  
-} */
-
-/* individual volume pages */
-/* page */
 .page {
   position: relative;
   top: 0;
@@ -430,27 +420,42 @@ img {
   transition: box-shadow 0.15s ease-in-out;
 }
 
+/* media query for site nav large desktop */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
 
+  /* Large screen, retina, stuff to override above media query */
+
+}
 
 /* media query for site nav tablet */
 @media (max-width: 1024px) {
 
   /* text styles */
   body {
-    font-size: 1em; /* 11/16 new tablet baseline size */
+    font-size: 1.3125em; /* 21/16 new tablet baseline size */
   }
 
   .hero-text {
-    font-size: .75em;
+    font-size: .55em;
   }
   /* end text styles */
   
 
   /* header */
   .hero {
-    position: relative;
+    position: static;
+    background-attachment: scroll;    
     background-position: left;
-    background-size: Size(auto);
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
   }
   
 
@@ -584,7 +589,7 @@ img {
 
   .content-right,
   .content-left {
-    width: 50%; /* 345/768 */
+    width: 60%; 
     float: none;
     margin: auto;
   }
@@ -612,7 +617,7 @@ img {
     /* margin-top: 2.25em; 36/16 */
     position: relative;
     top: -30.54420922%; /* 630/803 */  
-    font-size: 1.3125em; /* 21/16 */
+    font-size: 1em; /* 21/16 */
     z-index: 0;
 
   }
@@ -709,7 +714,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
  
   /* individual volume pages */
   .page {
-    position: relative;
+    position: static;
     top: 0;
     padding-top: 5.1428571429em;
     background-color: #FFFFFF;    
@@ -719,21 +724,15 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
   }
   
   .page--corner-1 {
-    height: 75px;
-    width: 75px;
-    position: absolute;
-    top: 0em;
-    background-color: rgba(255,255,255,0.2);
-    z-index: 2;
-    -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
-    clip-path: polygon(100% 0, 0% 100%, 0 0);
-    /* background-color: red; */
+    display: none;
   }
 
   .page-wrapper {
     width: 100%; /* 970/1440 */
-  }
-  
+    position: static;
+    top: 0
+  }  
+
   .number h2 {
     font-size: 2.4285714286em;
     line-height: .75em;
