@@ -367,6 +367,7 @@ img {
 } */
 
 /* individual volume pages */
+/* page */
 .page {
   position: relative;
   top: 0;
@@ -429,23 +430,10 @@ img {
   transition: box-shadow 0.15s ease-in-out;
 }
 
-@media (max-width: 1024px){
 
-  /* page */
-  .page-wrapper {
-    width: 90%; /* 970/1440 */
-    margin: auto;
-    /* margin-top: 2.25em; 36/16 */
-    position: relative;
-    top: -30.54420922%; /* 630/803 */  
-    font-size: 1.3125em; /* 21/16 */
-    z-index: 0;
-
-  }
-}
 
 /* media query for site nav tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   /* text styles */
   body {
@@ -459,6 +447,13 @@ img {
   
 
   /* header */
+  .hero {
+    background-position: left;
+    
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+  }
   .hero-image--home {
     background-image: url("../images/homepage/TabletJumbotron@2x.jpg");  
   }
@@ -576,7 +571,7 @@ img {
   /* content sections */
   .main {
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
     background-color: #FFFFFF;
   }
@@ -620,9 +615,18 @@ img {
   /* end content sections */
   
   /* individual volume pages */
+
   .page-wrapper {
-    width: 95%; /* 970/1440 */
-  }  
+    width: 90%; /* 970/1440 */
+    margin: auto;
+    /* margin-top: 2.25em; 36/16 */
+    position: relative;
+    top: -30.54420922%; /* 630/803 */  
+    font-size: 1.3125em; /* 21/16 */
+    z-index: 0;
+
+  }
+  
 
   .page p, h3 {
     margin: 0 4em; /* */
@@ -637,7 +641,7 @@ img {
 
   /* text styles */
   body {
-    font-size: 0.6875em; /* 11/16 new tablet baseline size */
+    font-size: 1em; 
   }
   h1 {
     font-family: "eurostile-extended",sans-serif;
@@ -648,15 +652,16 @@ img {
   
 
   /* header */
+
+  
   .hero-image--home {
     background-image: url("../images/homepage/TabletJumbotron@2x.jpg");  
   }
 
-  
   /* content sections */
   .main {
     width: 100%;
-    max-width: 768px;
+    max-width: 479px;
     margin: 0 auto;
     background-color: #FFFFFF;
   }
@@ -673,13 +678,13 @@ img {
   }
 
   .content-section h4 {
-    margin-top:1em;    
+    margin-top: 1em;    
     margin-bottom: 1em;
   }
 
   .content-right,
   .content-left {
-    width: 70%; /* 345/768 */
+    width: 80%; /* 345/768 */
     float: none;
     margin: auto;
   }
