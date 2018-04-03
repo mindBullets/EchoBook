@@ -752,6 +752,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     bottom: 0;
     width: 100%;
     font-size: 1.25em;
+    color: #D1B471;
   }
 
   .social ul {

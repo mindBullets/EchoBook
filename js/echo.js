@@ -69,7 +69,7 @@ $( window ).scroll( function() {
     $('.background-border-top').css('z-index', '0');    
   }
 
-  if ( $(this).scrollTop() < (anchorOffset[GOLD] / 2)) {
+  if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > 479)) {
     $('.social a').css( 'color', '#FFFFFF' );  
   } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD] / 2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
     changePageBorder('#D1B471'); //gold
