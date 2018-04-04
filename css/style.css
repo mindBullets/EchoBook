@@ -474,8 +474,16 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     font-size: 1.3125em; /*21/16 new tablet baseline size
   } */
 
-  .hero-text {
-    font-size: .55em;
+  .display {
+    font-size: 3em;
+  }
+
+  .display-subtext {
+    font-size: 1em;
+  }
+
+  .btn {
+    font-size: .9em;
   }
   /* end text styles */
   
@@ -649,9 +657,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     margin-bottom: 1em;
   }
 
-  .content-section .btn {
-    font-size: .9em;
-  }
   .content-right,
   .content-left {
     width: 60%; 
