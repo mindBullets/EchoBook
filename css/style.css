@@ -63,7 +63,7 @@ h1 {
 
 /* navigation styles */
 .global-header {
-  width: 95.1388888888889%;
+  width: 100%;
   background: linear-gradient(180deg, #393838 20%, rgba(0,0,0,0) 100%);
   height: 118px;
   position: fixed;
@@ -75,6 +75,7 @@ h1 {
 
 .container {
   width: 95.1388888888889%;
+  /* width: 100%; */
 }
 
 .brand {
@@ -180,7 +181,7 @@ h1 {
 /* social menu */
 .social {
   position: fixed;
-  right: 2.3333333333em;
+  left: 1.8em;
   top: 40%;
   font-size: 1.25em;  
 }
@@ -643,7 +644,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   /* social */
   .social {
     position: fixed;
-    right: 1.75em;
+    left: 1.8em;
     top: 40%;
     font-size: 1.25em;  
   }
@@ -843,7 +844,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
 
   /* social menu */
   .social {
-    right: initial;
+    left: initial;
     top: initial;
     bottom: 0;
     width: 100%;
