@@ -11,7 +11,7 @@ var navbarHeight = $('header').outerHeight();
 /* end navigation show/hide variables */
 
 /* header variables */
-var heroTextFade = $( '.hero-text .display, .hero-text .display-subtext' );
+var heroTextFade = $( '.hero-text .display, .hero-text .display-subtext, .volume-title, .volume-number' );
 /* end header variables */
 
 /* border variables */
