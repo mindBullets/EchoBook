@@ -44,18 +44,18 @@ function getSectionScrollPosition() {
 
 //social link set up
 function socialLinkSetUp (){
-  let path = window.location.pathname;
-  let curPage = '/index.html'
-
-  if( ( path === curPage ) && ($(window).width() <= PHONE) ) {
-    $('.social li a').css( 'color', '#D1B471' ); //set to gold if index is in mobile      
-  } else if( ( path === curPage ) && ($(window).width() > PHONE) ) {
-    $('.social li a').css( 'color', '#ffffff' );
-    
-  }
-  
+  var path = window.location.pathname;
+  var index = '/index.html';
+  var myRoot = '/';
+  var width = $(window).width();
+  if( (path === index ) || (path === myRoot)) {
+    if ( width <= PHONE ) {
+      $('.social li a').css( 'color', '#D1B471' ); //set to gold if index is in mobile      
+    } else {
+      $('.social li a').css( 'color', '#ffffff' );      
+    }
+  } 
 }
-
 socialLinkSetUp();
 //change border page border color
 function changePageBorder(hex) {
