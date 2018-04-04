@@ -468,7 +468,15 @@ only screen and (                min-resolution: 192dpi) and (min-width: 1300px)
 only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
 
   /* Large screen, retina, stuff to override above media query */
-
+  .hero-image--home {
+    background-image: url("../images/homepage/DialecticJumbotron@2x.jpg");  
+  }
+  .hero-image--volume1 {
+    background-image: url("../images/reading-images/heroImageVolume1@2x.jpg");    
+  }
+  .hero-image--volume2 {
+    background-image: url("../images/reading-images/heroImageVolume2@2x.jpg");    
+  }
 }
 
 /* media query for site nav tablet */
