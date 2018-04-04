@@ -45,7 +45,7 @@ function getSectionScrollPosition() {
 //social link set up
 function socialLinkSetUp (){
   var path = window.location.pathname;
-  var index = 'dev/ucsc/capstone2018wi/jumar/index.html';
+  var index = '/dev/ucsc/capstone2018wi/jumar/index.html';
   var ucsc = '/dev/ucsc/capstone2018wi/jumar/'
   var myRoot = '/';
   var width = $(window).width();
