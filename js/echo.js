@@ -1,3 +1,8 @@
+/* media consts */
+const PHONE = 479;
+const TABLET = 768;
+const DESKTOP = 1024;
+
 /* navigation show/hide variables */
 var didScroll;
 var lastScrollTop = 0;
@@ -43,7 +48,7 @@ function changePageBorder(hex) {
   $('.background').css('border-left', 'solid 1em' + hex );
   $('.background').css('border-bottom', 'solid 1em' + hex );
   $('.background').css('border-right', 'solid 1em' + hex );
-  $('.social li a').css( 'color', hex );  
+  $('.social li a').css( 'color', hex );
 }
 
 getSectionScrollPosition();
@@ -73,7 +78,7 @@ $( window ).scroll( function() {
     $('.background-border-top').css('z-index', '0');    
   }
 
-  if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > 479)) {
+  if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > PHONE)) {
     $('.social a').css( 'color', '#FFFFFF' );  
   } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD] / 2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
     changePageBorder('#D1B471'); //gold
@@ -88,7 +93,7 @@ $( window ).scroll( function() {
 
 function parallax() {
   var wScroll = $(window).scrollTop();
-  if ( $(window).width() > 1024 ) {
+  if ( $(window).width() > DESKTOP ) {
     $('.parallax-bg').css('background-position', 'center ' + (wScroll * -0.5) + 'px')
   }
 }
@@ -152,7 +157,7 @@ $('.menu-toggle').click(function () {
 });
 
 $('#dropdown').hover(function () {
-  if ( $(window).width() > 1024 ) {
+  if ( $(window).width() > DESKTOP ) {
     $('.sub-nav').toggleClass('sub-nav--open', 200);
   }
   

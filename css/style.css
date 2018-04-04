@@ -475,7 +475,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   } */
 
   .display {
-    font-size: 3em;
+    font-size: 2em;
+    padding-left: 0;
+    letter-spacing: initial;
+    line-height: .6;
     padding-left: 0;
   }
 
@@ -823,7 +826,6 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     bottom: 0;
     width: 100%;
     font-size: 1.25em;
-    color: #D1B471;
   }
 
   .social ul {
