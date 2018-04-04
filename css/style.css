@@ -33,6 +33,10 @@ body {
 
 }
 
+.center {
+  text-align: center;
+}
+
 .background {
   border-left: solid 1em #D1B471;
   border-right: solid 1em #D1B471;
@@ -683,7 +687,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     float: none;
     margin: auto;
   }
-
 
   .content-left p,
   .content-right p {
