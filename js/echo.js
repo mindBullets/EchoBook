@@ -46,9 +46,10 @@ function getSectionScrollPosition() {
 function socialLinkSetUp (){
   var path = window.location.pathname;
   var index = '/index.html';
+  var ucsc = '/dev/ucsc/capstone2018wi/jumar/'
   var myRoot = '/';
   var width = $(window).width();
-  if( (path === index ) || (path === myRoot)) {
+  if( (path === index ) || (path === myRoot) || (path === ucsc)) {
     if ( width <= PHONE ) {
       $('.social li a').css( 'color', '#D1B471' ); //set to gold if index is in mobile      
     } else {
