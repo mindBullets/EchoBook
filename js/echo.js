@@ -42,6 +42,21 @@ function getSectionScrollPosition() {
 //determine if you need the hover over sub menu
 // call on load and resize
 
+//social link set up
+function socialLinkSetUp (){
+  let path = window.location.pathname;
+  let curPage = '/index.html'
+
+  if( ( path === curPage ) && ($(window).width() <= PHONE) ) {
+    $('.social li a').css( 'color', '#D1B471' ); //set to gold if index is in mobile      
+  } else if( ( path === curPage ) && ($(window).width() > PHONE) ) {
+    $('.social li a').css( 'color', '#ffffff' );
+    
+  }
+  
+}
+
+socialLinkSetUp();
 //change border page border color
 function changePageBorder(hex) {
   $('.background-border-top').css('background-color', hex); //set to gold  
@@ -62,6 +77,7 @@ const BLACK = 3;
 $( window ).resize( function () {
   getSectionScrollPosition();
   heroImageHeight = $('.hero').height(); //recalculate hero height
+  socialLinkSetUp();
 
 });
 
