@@ -429,9 +429,9 @@ img {
   margin-bottom: 1em;
 }
 
-/* .chapter p:last-of-type {
+.chapter p:last-of-type {
   margin-bottom: 9em;
-} */
+}
 /* end individual volume pages */
 
 
@@ -650,7 +650,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   }
 
   .content-section .btn {
-    font-size: .55em;
+    font-size: .9em;
   }
   .content-right,
   .content-left {
@@ -687,11 +687,15 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
 
   }
   
+  .page {
+    padding: 8em 3em 0 3em;    
+  }
 
   .page p, h3 {
     margin: 0 4em; /* */
     margin-bottom: 1em;
   }
+
   /* end individual volume pages */
 
 }
@@ -777,7 +781,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
   .page {
     position: static;
     top: 0;
-    padding-top: 5.1428571429em;
+    padding: 5.1428571429em 0 0 0;
     background-color: #FFFFFF;    
     /* background-color: #ffffff; */
     -webkit-clip-path: polygon(75px 0, 100% 0, 100% 100%, 0% 100%, 0 75px);
@@ -801,7 +805,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
   }
 
   .page p, h3 {
-    margin: 0 2em; /* */
+    margin: 0 1em; /* */
     margin-bottom: 1em;
   }
   /* end individual volume pages */
