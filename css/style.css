@@ -476,6 +476,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
 
   .display {
     font-size: 3em;
+    padding-left: 0;
   }
 
   .display-subtext {
