@@ -879,9 +879,8 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     /* border: 1px solid black; */
   }
 
-  .social a:link,
-  .social a:visited {
-    
+  .social li a:link,
+  .social li a:visited {    
     color: inherit;
     padding: 1em 1.5em;
   }

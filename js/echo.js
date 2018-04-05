@@ -1,12 +1,19 @@
 
 
 $( document ).ready(function() {
-  
   /* media consts */
   const PHONE = 479;
   const TABLET = 768;
   const DESKTOP = 1024;
   
+  /* section color consts */
+  const GOLD = 0;
+  const PURPLE = 1;
+  const BLUE = 2;
+  const BLACK = 3;
+  /* end section consts used to detect scrolling to a new section */
+  
+
   /* navigation show/hide variables */
   var scrollLink = $('.scroll');
   var didScroll;
@@ -56,13 +63,16 @@ $( document ).ready(function() {
     var width = $(window).width();
     if( (path === index ) || (path === myRoot) || (path === ucsc)) {
       if ( width <= PHONE ) {
-        $('.social li a').css( 'color', '#D1B471' ); //set to gold if index is in mobile      
+        $('.social li a').css( 'color', '#D1B471 !important' ); //set to gold if index is in mobile      
+        //  $('.social').hasClass('white').removeClass('white').addClass('gold');
       } else {
         $('.social li a').css( 'color', '#ffffff' );      
+        //$('.social').hasClass('gold').removeClass('gold').addClass('white');
+        
       }
     } 
   }
-  socialLinkSetUp();
+  
   //change border page border color
   function changePageBorder(hex) {
     $('.background-border-top').css('background-color', hex); //set to gold  
@@ -72,13 +82,16 @@ $( document ).ready(function() {
     $('.social li a').css( 'color', hex );
   }
 
+  //disable parallax on tablet and below
+  function parallax() {
+    var wScroll = $(window).scrollTop();
+    if ( $(window).width() > DESKTOP ) {
+      $('.parallax-bg').css('background-position', 'center ' + (wScroll * -0.5) + 'px')
+    }
+  }
+  
   getSectionScrollPosition();
-
-  const GOLD = 0;
-  const PURPLE = 1;
-  const BLUE = 2;
-  const BLACK = 3;
-  /* end section variables used to detect scrolling to a new section */
+  socialLinkSetUp();
 
   $( window ).resize( function () {
     getSectionScrollPosition();
@@ -88,7 +101,7 @@ $( document ).ready(function() {
   });
 
   $( window ).scroll( function() {
-    var myScrollTop = $(this).scrollTop();
+    var myScrollTop = $(this).scrollTop();    
     parallax();
 
     //fixed top border
@@ -100,8 +113,11 @@ $( document ).ready(function() {
       $('.background-border-top').css('z-index', '0');    
     }
 
-    if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > PHONE)) {
-      $('.social a').css( 'color', '#FFFFFF' );  
+    if ( ($(this).scrollTop() < 0) && ($(this).width() <= PHONE) ) {
+      console.log('gold');
+      $('.social li a').css( 'color', '#D1B471' );
+    } else if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > PHONE)) {
+      $('.social li a').css( 'color', '#FFFFFF' );  
     } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD] / 2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
       changePageBorder('#D1B471'); //gold
     } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
@@ -113,21 +129,18 @@ $( document ).ready(function() {
     }
   });
 
-  function parallax() {
-    var wScroll = $(window).scrollTop();
-    if ( $(window).width() > DESKTOP ) {
-      $('.parallax-bg').css('background-position', 'center ' + (wScroll * -0.5) + 'px')
-    }
-  }
-
+  
   /* navigation show/hide */
-  var didScroll;
   // on scroll, let the interval function know the user has scrolled
   $(window).scroll(function (event) {
     didScroll = true;
+    //smooth fadeout/fade in on the text
+    if ($(this).scrollTop() <= heroImageHeight) {
+      heroTextFade.css( { 'opacity': 1 - $(this).scrollTop() *.0025 });
+    }
   });
 
-  //doesn't run all the time
+  //doesn't run parrallax all the time
   setInterval(function () {
     if (didScroll) {
       hasScrolled();
@@ -160,10 +173,10 @@ $( document ).ready(function() {
 
     lastScrollTop = st;
 
-    /* fade hero text */
-    heroTextFade.css({
-      'opacity': 1 - st*.0025
-    });
+    /* fade hero text moved outside of set interval so it's smooth */
+    // heroTextFade.css({
+    //   'opacity': 1 - st*.0025
+    // });
     /* end fade hero text */
     /* add background color changer here */
     /* end background color changer here */
@@ -177,7 +190,8 @@ $( document ).ready(function() {
     $('.site-nav').toggleClass('site-nav--open', 200);  
     $(this).toggleClass('open');
   });
-
+  
+  //sub menu hover reveal
   $('#dropdown').hover(function () {
     if ( $(window).width() > DESKTOP ) {
       $('.sub-nav').toggleClass('sub-nav--open', 200);
@@ -188,6 +202,9 @@ $( document ).ready(function() {
   
   //smooth scroll here
   scrollLink.click( function (e) {
+    // if ( $('.sub-nav').hasClass('sub-nav--open') ) {
+    //   $('.sub-nav').removeClass('sub-nav--open', 50);      
+    // }
     e.preventDefault();
     $( 'html, body' ).animate({
       scrollTop: $(this.hash).offset().top
