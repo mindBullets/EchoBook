@@ -250,6 +250,10 @@ img {
   height: auto;
 }
 
+section img {
+  margin: 2.5em 0;
+}
+
 /* parallax */
 .parallax-bg {
   transition: initial;
