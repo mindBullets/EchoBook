@@ -875,14 +875,14 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 1024px)
     flex: 1 0 auto;
     text-align: center;
     background-color: white;
-    padding: 1em 0;
+    padding: .5em 0;
     /* border: 1px solid black; */
   }
 
   .social li a:link,
   .social li a:visited {    
     color: inherit;
-    padding: 1em 1.5em;
+    padding: 1.5em 1.5em;
   }
 
 
