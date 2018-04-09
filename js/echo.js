@@ -67,7 +67,8 @@ $( document ).ready(function() {
         $('.social li a').css( 'color', '#D1B471 !important' ); //set to gold if index is in mobile      
         //  $('.social').hasClass('white').removeClass('white').addClass('gold');
       } else {
-        $('.social li a').css( 'color', '#ffffff' );      
+        $('.social li a').css( 'color', '#ffffff' ); 
+        $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px #FFFFFF' );     
         //$('.social').hasClass('gold').removeClass('gold').addClass('white');
         
       }
