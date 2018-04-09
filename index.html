@@ -38,32 +38,68 @@
 
 <body>
 
-  <!-- Brand, Navigation, and Main CTA -->
-    <header class="global-header nav-down">
-      <div class="container" id="nav-container">
-          <h1 class="brand"><a href="#top" class="scroll">KENT<span class="black-brand">WAYNE</span></a></h1>
-        
-        <nav class="site-nav off-white">
-          <ul>
-            <li id="dropdown"><a href="#volume1" class="scroll">READ CHAPTERS</a>
-              <ul class="sub-nav off-white">
-                <li><a href="echo1.html" >Volume 1: Approaching Shatter</a></li>
-                <li><a href="echo2.html" >Volume 2: The Taste of Ashes</a></li>
-                <li><a href="#volume3" class="scroll">Volume 3: The Dialectic of Agony</a></li>
-              </ul>
-            </li>
-            <li><a href="#about" class="scroll">ABOUT</a></li>
-            <li><a target="_blank" href="https://amzn.to/2IocFHG" >BUY ON AMAZON</a></li>
-          </ul>
-        </nav>
+  <!-- Brand, Navigation, Dot Navigation -->
+  <header class="global-header nav-down">
+    <div class="container" id="nav-container">
+        <h1 class="brand"><a href="#top" class="scroll">KENT<span class="black-brand">WAYNE</span></a></h1>
+      
+      <nav class="site-nav off-white">
+        <ul>
+          <li id="dropdown"><a href="#volume1" class="scroll">READ CHAPTERS</a>
+            <ul class="sub-nav off-white">
+              <li><a href="echo1.html" >Volume 1: Approaching Shatter</a></li>
+              <li><a href="echo2.html" >Volume 2: The Taste of Ashes</a></li>
+              <li><a href="#volume3" class="scroll">Volume 3: The Dialectic of Agony</a></li>
+            </ul>
+          </li>
+          <li><a href="#about" class="scroll">ABOUT</a></li>
+          <li><a target="_blank" href="https://amzn.to/2IocFHG" >BUY ON AMAZON</a></li>
+        </ul>
+      </nav>
 
 
-        <div class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
+      <div class="menu-toggle">
+          <div class="hamburger"></div>
       </div>
-    </header>
-  <!-- End Brand, Navigation, and Main CTA -->
+    </div>
+  </header>
+    
+  <nav class="dot-nav">
+		<ul>
+    <li>
+        <a href="#top" class="scroll">
+          <span class="dot-nav--label">Back to Top</span>
+          <span class="dot-nav--dot"></span>
+        </a>
+      </li>
+			<li>
+				<a href="#volume1" class="scroll">
+          <span class="dot-nav--label">Vol. 1 Approaching Shatter</span>
+					<span class="dot-nav--dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#volume2" class="scroll">
+          <span class="dot-nav--label">Vol. 2 The Taste of Ashes</span>
+					<span class="dot-nav--dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#volume3" class="scroll">
+          <span class="dot-nav--label">Vol. 3 The Dialectic of Agony</span>
+					<span class="dot-nav--dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#about" class="scroll">
+          <span class="dot-nav--label">About Me</span>
+					<span class="dot-nav--dot"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<a class="dot-nav--toggle">Open navigation<span></span></a>
+  <!-- End Brand, Navigation, Dot Navigation -->
 
   <div class="hero hero-image--home parallax-bg" id="top"><!-- Hero -->
     <div class="hero-text white">
@@ -167,12 +203,7 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   <script src="js/echo.js"></script>
-
-
-
 </body>
-
-
-
 </html>

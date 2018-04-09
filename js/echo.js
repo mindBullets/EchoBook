@@ -1,5 +1,3 @@
-
-
 $( document ).ready(function() {
   /* media consts */
   const PHONE = 479;
@@ -42,12 +40,15 @@ $( document ).ready(function() {
 
   //get the positions of all the sections
   function getSectionScrollPosition() {
+    let curSection, offset;
     for (let i = 0; i < arr.length; i++) {
-      let curSection = $( '#' + arr[i] );
-      if (curSection.length) {
-        let offset = curSection.offset().top;
-        anchorOffset.push(offset);
+      curSection = $( '#' + arr[i] );
+      if ( i === 0 ) {
+        offset = curSection.offset().top;
+      } else {
+        offset = curSection.offset().top-20;        
       }
+      anchorOffset.push(offset);              
     }
   }
 
@@ -80,6 +81,7 @@ $( document ).ready(function() {
     $('.background').css('border-bottom', 'solid 1em' + hex );
     $('.background').css('border-right', 'solid 1em' + hex );
     $('.social li a').css( 'color', hex );
+    $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px '+ hex );
   }
 
   //disable parallax on tablet and below
@@ -88,6 +90,12 @@ $( document ).ready(function() {
     if ( $(window).width() > DESKTOP ) {
       $('.parallax-bg').css('background-position', 'center ' + (wScroll * -0.5) + 'px')
     }
+  }
+
+  function smoothScroll(target) {
+    $( 'html, body' ).animate({
+      scrollTop: $(target).offset().top+5
+    }, 1000);
   }
   
   getSectionScrollPosition();
@@ -101,6 +109,8 @@ $( document ).ready(function() {
   });
 
   $( window ).scroll( function() {
+    console.log($(this).scrollTop());
+    
     var myScrollTop = $(this).scrollTop();    
     parallax();
 
@@ -116,15 +126,17 @@ $( document ).ready(function() {
     if ( ($(this).scrollTop() < 0) && ($(this).width() <= PHONE) ) {
       console.log('gold');
       $('.social li a').css( 'color', '#D1B471' );
-    } else if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && $(this).width() > PHONE)) {
+      $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px #D1B471' );      
+    } else if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && ($(this).width() > PHONE))) {
       $('.social li a').css( 'color', '#FFFFFF' );  
+      $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px #FFFFFF' );            
     } else if ( ($(this).scrollTop() >= (anchorOffset[GOLD] / 2))  && ($(this).scrollTop() < anchorOffset[PURPLE] ) ) {
       changePageBorder('#D1B471'); //gold
-    } else if ( ( $(this).scrollTop() >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
+    } else if ( (( $(this).scrollTop()) >= anchorOffset[PURPLE] ) && ( $(this).scrollTop() < anchorOffset[BLUE] ) ) {
       changePageBorder("#9013FE"); //purple
-    } else if ( ( $(this).scrollTop() >= anchorOffset[BLUE] ) && ( $(this).scrollTop() < anchorOffset[BLACK] ) ) {
+    } else if ( (( $(this).scrollTop()) >= anchorOffset[BLUE] ) && ( $(this).scrollTop() < anchorOffset[BLACK] ) ) {
       changePageBorder("#1893E7"); //blue
-    } else if ( $(this).scrollTop() >= anchorOffset[BLACK] ) {
+    } else if ( ($(this).scrollTop()) >= anchorOffset[BLACK] ) {
       changePageBorder("#4B4B4B"); //black
     }
   });
@@ -140,13 +152,13 @@ $( document ).ready(function() {
     }
   });
 
-  //doesn't run parrallax all the time
+  //doesn't run parallax all the time
   setInterval(function () {
     if (didScroll) {
       hasScrolled();
       didScroll = false;
     }
-  }, 250);
+  }, 0);
 
   function hasScrolled() {
     var st = $(this).scrollTop();
@@ -172,15 +184,6 @@ $( document ).ready(function() {
     }
 
     lastScrollTop = st;
-
-    /* fade hero text moved outside of set interval so it's smooth */
-    // heroTextFade.css({
-    //   'opacity': 1 - st*.0025
-    // });
-    /* end fade hero text */
-    /* add background color changer here */
-    /* end background color changer here */
-
   }
   /* end navigation show/hide */
 
@@ -202,13 +205,8 @@ $( document ).ready(function() {
   
   //smooth scroll here
   scrollLink.click( function (e) {
-    // if ( $('.sub-nav').hasClass('sub-nav--open') ) {
-    //   $('.sub-nav').removeClass('sub-nav--open', 50);      
-    // }
     e.preventDefault();
-    $( 'html, body' ).animate({
-      scrollTop: $(this.hash).offset().top
-    }, 1000);
+    smoothScroll(this.hash);
   });
 
 
