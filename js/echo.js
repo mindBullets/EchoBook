@@ -73,7 +73,7 @@ $( document ).ready(function() {
     //if you're on the index page
     if( (path === myIndex ) || (path === devIndex ) || (path === myRoot) || (path === ucsc)) {
       if ( width <= PHONE ) {
-        $('.social li a').css( 'color', '#D1B471 !important' ); //set to gold if index is in mobile      
+        $('.social li a').css( 'color', '#D1B471 ' ); //set to gold if index is in mobile      
         //  $('.social').hasClass('white').removeClass('white').addClass('gold');
       } else {
         $('.social li a').css( 'color', '#ffffff' ); 
