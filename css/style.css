@@ -784,6 +784,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     padding: 0;
   }
 
+  .dot-nav--menu a {
+    font-weight: 400;
+    font-size: 0.8572222222em;
+}
   .dot-nav a:hover,
   .dot-nav a:active {
     color: #4B4B4B;
