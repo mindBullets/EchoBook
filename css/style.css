@@ -731,7 +731,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   }
   /* end navigation styles */
 
-  /* dot nav */
+  /* dot nav for tablet and below */
   .dot-nav {
     position: fixed;
     top: 80%;
@@ -767,8 +767,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
     padding: 0;
     list-style: none;
     position: fixed;
-    right: 9em;
-    bottom: 7em;
+    right: 6em;
+    bottom: 8em;
     width: 5em;
     height: 0;
     overflow: hidden;
@@ -932,8 +932,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
   }
 
   .page p, h3 {
-    margin: 0 4em; /* */
-    margin-bottom: 1em;
+    margin: 4em 4em 1em 4em; /* */
   }
   /* end individual volume pages */
 

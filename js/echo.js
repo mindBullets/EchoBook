@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+  var didIScroll = 0;
+
   /* media consts */
   const PHONE = 479;
   const TABLET = 768;
@@ -19,6 +21,11 @@ $( document ).ready(function() {
   var delta = 5; //pixels
   var navbarHeight = $('header').outerHeight();
   /* end navigation show/hide variables */
+
+  var myIndex = "/index.html"
+  var devIndex = '/dev/ucsc/capstone2018wi/jumar/index.html';
+  var ucsc = '/dev/ucsc/capstone2018wi/jumar/'
+  var myRoot = '/';
 
   /* header variables */
   var heroTextFade = $( '.hero-text .display, .hero-text .display-subtext, .volume-title, .volume-number' );
@@ -57,12 +64,14 @@ $( document ).ready(function() {
 
   //social link set up
   function socialLinkSetUp (){
-    var path = window.location.pathname;
-    var index = '/dev/ucsc/capstone2018wi/jumar/index.html';
-    var ucsc = '/dev/ucsc/capstone2018wi/jumar/'
-    var myRoot = '/';
-    var width = $(window).width();
-    if( (path === index ) || (path === myRoot) || (path === ucsc)) {
+    let path = window.location.pathname;
+    // var index = '/dev/ucsc/capstone2018wi/jumar/index.html';
+    // var ucsc = '/dev/ucsc/capstone2018wi/jumar/'
+    // var myRoot = '/';
+    let width = $(window).width();
+
+    //if you're on the index page
+    if( (path === myIndex ) || (path === devIndex ) || (path === myRoot) || (path === ucsc)) {
       if ( width <= PHONE ) {
         $('.social li a').css( 'color', '#D1B471 !important' ); //set to gold if index is in mobile      
         //  $('.social').hasClass('white').removeClass('white').addClass('gold');
@@ -93,9 +102,14 @@ $( document ).ready(function() {
   }
 
   function smoothScroll(target) {
-    $( 'html, body' ).animate({
-      scrollTop: $(target).offset().top+5
-    }, 1000);
+    let path = window.location.pathname;
+
+    //if you're on the index page
+    if( (path === myIndex ) || (path === devIndex ) || (path === myRoot) || (path === ucsc)) {
+      $( 'html, body' ).animate({ scrollTop: $(target).offset().top }, 1000);
+    } else {
+      $( 'html, body' ).animate({ scrollTop: $(target).offset().top-100 }, 1000);
+    }
   }
   
   getSectionScrollPosition();
@@ -109,10 +123,16 @@ $( document ).ready(function() {
   });
 
   $( window ).scroll( function() {
-    console.log($(this).scrollTop());
-    
+    // console.log($(this).scrollTop());
+    didScroll = true;
+
     var myScrollTop = $(this).scrollTop();    
     parallax();
+
+    //smooth fadeout/fade in on the text
+    if ($(this).scrollTop() <= heroImageHeight) {
+      heroTextFade.css( { 'opacity': 1 - $(this).scrollTop() *.0025 });
+    }
 
     //fixed top border
     if( $(this).scrollTop() > heroImageHeight) {
@@ -123,6 +143,7 @@ $( document ).ready(function() {
       $('.background-border-top').css('z-index', '0');    
     }
 
+    //change borders here
     if ( ($(this).scrollTop() < 0) && ($(this).width() <= PHONE) ) {
       console.log('gold');
       $('.social li a').css( 'color', '#D1B471' );
@@ -144,13 +165,13 @@ $( document ).ready(function() {
   
   /* navigation show/hide */
   // on scroll, let the interval function know the user has scrolled
-  $(window).scroll(function (event) {
-    didScroll = true;
-    //smooth fadeout/fade in on the text
-    if ($(this).scrollTop() <= heroImageHeight) {
-      heroTextFade.css( { 'opacity': 1 - $(this).scrollTop() *.0025 });
-    }
-  });
+  // $(window).scroll(function (event) {
+  //   didScroll = true;
+  //   //smooth fadeout/fade in on the text
+  //   if ($(this).scrollTop() <= heroImageHeight) {
+  //     heroTextFade.css( { 'opacity': 1 - $(this).scrollTop() *.0025 });
+  //   }
+  // });
 
   //doesn't run parallax all the time
   setInterval(function () {
@@ -158,7 +179,7 @@ $( document ).ready(function() {
       hasScrolled();
       didScroll = false;
     }
-  }, 0);
+  }, 250);
 
   function hasScrolled() {
     var st = $(this).scrollTop();
@@ -166,7 +187,6 @@ $( document ).ready(function() {
       return;
     }
     // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight) {
       // Scroll Down
       $('header').removeClass('nav-down').addClass('nav-up');
@@ -190,20 +210,31 @@ $( document ).ready(function() {
 
   // hamburger show hide
   $('.menu-toggle').click(function () { 
-    $('.site-nav').toggleClass('site-nav--open', 200);  
+    $('.site-nav').toggleClass('site-nav--open', 100);  
     $(this).toggleClass('open');
+
+    // close dot nav if it's open
+    if ( $('.dot-nav ul').hasClass('dot-nav--open') ) {
+      $('.dot-nav ul').toggleClass('dot-nav--open', 100);  
+      $('.dot-nav--toggle').toggleClass('open');
+    }
+    
   });
   
 
   //sub menu hover reveal
   $('#dropdown').hover(function () {
     if ( $(window).width() > DESKTOP ) {
-      $('.sub-nav').toggleClass('sub-nav--open', 200);
+      $('.sub-nav').toggleClass('sub-nav--open', 100);
     }
   });
   
   $('.dot-nav--toggle').click(function () { 
-    $('.dot-nav ul').toggleClass('dot-nav--open', 200);  
+    if ( $('.site-nav').hasClass('site-nav--open') ) {
+      $('.site-nav').toggleClass('site-nav--open', 100);
+      $( '.menu-toggle' ).toggleClass('open');
+    }
+    $('.dot-nav ul').toggleClass('dot-nav--open', 100);  
     $(this).toggleClass('open');
   });
   
