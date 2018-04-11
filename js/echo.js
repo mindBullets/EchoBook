@@ -69,7 +69,6 @@ $( document ).ready(function() {
       } else {
         $('.social li a').css( 'color', '#ffffff' ); 
         $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px #FFFFFF' );     
-        //$('.social').hasClass('gold').removeClass('gold').addClass('white');
         
       }
     } 
@@ -195,14 +194,18 @@ $( document ).ready(function() {
     $(this).toggleClass('open');
   });
   
+
   //sub menu hover reveal
   $('#dropdown').hover(function () {
     if ( $(window).width() > DESKTOP ) {
       $('.sub-nav').toggleClass('sub-nav--open', 200);
     }
-    
   });
   
+  $('.dot-nav--toggle').click(function () { 
+    $('.dot-nav ul').toggleClass('dot-nav--open', 200);  
+    $(this).toggleClass('open');
+  });
   
   //smooth scroll here
   scrollLink.click( function (e) {
