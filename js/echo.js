@@ -145,7 +145,7 @@ $( document ).ready(function() {
 
     //change borders here
     if ( ($(this).scrollTop() < 0) && ($(this).width() <= PHONE) ) {
-      console.log('gold');
+      // console.log('gold');
       $('.social li a').css( 'color', '#D1B471' );
       $('.dot-nav--dot').css( 'box-shadow', 'inset 0 0 0 2px #D1B471' );      
     } else if ( $(this).scrollTop() < ((anchorOffset[GOLD] / 2) && ($(this).width() > PHONE))) {
